@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 
-class Hello extends Component {
+class GroceryList extends Component {
     render() {
-        const name = 'friend'
         return (
-            <h1>Hello, {name}.</h1>
+            <ul>
+                <ListItem quanity="1" name="Bread" />
+                <ListItem quanity="6" name="Eggs" />
+                <ListItem quanity="2" name="Milk" />
+            </ul>
             );
     }
 }
 
-ReactDom.render(<Hello />, document.getElementById('root'));
+class ListItem extends Component {
+    render() {
+        return (
+            <li>{this.props.quanity}x {this.props.name}</li>
+            );
+    }
+}
+
+
+ReactDom.render(<GroceryList />, document.getElementById('root'));
