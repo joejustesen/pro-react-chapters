@@ -72,11 +72,11 @@ ul {
 .card__title:before {
     display: inline-block;
     width: 1em;
-    content: '*';
+    content: '\25B6';
 }
 
 .card__title--is-open:before {
-    content: '*';
+    content: '\25BC';
 }
 
 .checklist__task:first-child {
@@ -86,7 +86,8 @@ ul {
 }
 
 .checklist__task--remove:after{
+    margin: 0em  .25em;
     display: inline-block;
     color: #d66;
-    content: "+";
+    content: "\2716";
 }
