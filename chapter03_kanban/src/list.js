@@ -4,7 +4,7 @@ import Card from './card';
 class List extends Component {
     render() {
         const cards = this.props.cards.map((card) => {
-            return <Card key={card.id} {...card} />
+            return <Card key={card.id} taskCallbacks={this.props.taskCallbacks} {...card} />
 
         });
 
@@ -19,7 +19,8 @@ class List extends Component {
 
 List.propTypes = {
     title: PropTypes.string.isRequired,
-    cards: PropTypes.arrayOf(PropTypes.object)
+    cards: PropTypes.arrayOf(PropTypes.object),
+    taskCallbacks: PropTypes.object
 };
 
 export default List;
